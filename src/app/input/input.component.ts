@@ -4,14 +4,15 @@ import { TeacherDataService } from '../teacher-data.service';
 
 @Component({
   selector: 'app-input',
-  templateUrl: './input.component.html'
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.css']
 })
 export class InputComponent {
   firstName = '';
   lastName = '';
-  employmentTerm = 'Full-time'; // Default selection
+  employmentTerm = '';
 
-  constructor(private teacherDataService: TeacherDataService, private router: Router) {}
+  constructor(private router: Router, private teacherDataService: TeacherDataService) { }
 
   submit() {
     this.teacherDataService.setTeacherData({

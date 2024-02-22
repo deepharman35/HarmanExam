@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TeacherDataService {
+  private teacherData = {};
 
-  constructor() { }
+  setTeacherData(data: any) {
+    this.teacherData = data;
+  }
+
+  getTeacherData() {
+    return this.teacherData;
+  }
 }
