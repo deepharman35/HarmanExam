@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TeacherDataService {
-  private teacherData = {};
+  private teacherData = { firstName: '', lastName: '', employmentTerm: '' };
 
   setTeacherData(data: any) {
     this.teacherData = data;
